@@ -1,0 +1,51 @@
+_trannySpeed = $transitionSpeed;
+
+input(){
+  border-width: $border-width;
+  border-style: $border-style;
+  transition: color _trannySpeed, border _trannySpeed, background _trannySpeed, box-shadow _trannySpeed * 0.5;
+}
+
+inputDefault(ui-state,tolerance){
+  up = lighten(desaturate(ui-state, (tolerance * 0.7)), (tolerance* 0.3));
+  down = darken(saturate(ui-state, (tolerance * 0.8)), (tolerance* 0.2));
+  _veryLight = lighten(ui-state, tolerance * 4);
+  input();
+  legibleTextColor(_veryLight);
+  background: _veryLight; 
+  border-color: ui-state; 
+}
+
+inputHover(ui-state,tolerance){
+  up = lighten(desaturate(ui-state, (tolerance * 0.7)), (tolerance* 0.3));
+  down = darken(saturate(ui-state, (tolerance * 0.8)), (tolerance* 0.2));
+  _veryLight = lighten(up, tolerance * 3.5);
+  input();
+  legibleTextColor(_veryLight);
+  background: _veryLight;
+  border-color: up; 
+}
+
+inputActive(ui-state,tolerance){
+  up = lighten(desaturate(ui-state, (tolerance * 0.7)), (tolerance* 0.3));
+  down = darken(saturate(ui-state, (tolerance * 0.8)), (tolerance* 0.2));
+  _veryLight = lighten(down, tolerance * 2.25);
+  input();
+  legibleTextColor(_veryLight);
+  background: _veryLight;
+  border-color: down;
+  //box-shadow: inset 2px 2px 4px 1px rgba(0,0,0,0.2);
+}
+
+inputDisabled(ui-state,tolerance){
+  inputDefault(ui-state,tolerance);
+  opacity:0.5;
+}
+
+iInput = {
+  'default': inputDefault,
+  'hover': inputHover,
+  'active': inputActive,
+  'focus': inputActive,
+  'disabled' : inputDisabled 
+}

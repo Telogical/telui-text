@@ -1,0 +1,28 @@
+
+
+.ui-text
+  .ui-text-label 
+    min-height: $brick;
+    line-height: $line-height;
+    font-size: $line;
+  .ui-text-input
+    min-height: $brick;
+  .ui-text-closeicon-frame
+    overflow: visible;
+    position: relative;
+    width: $line;
+    right: $line-margin;
+    top: $line-margin + $border-width;
+    float: right;
+    bottom: $line-margin;
+    height:0
+    .ui-icon
+      cursor: pointer;
+    
+ui-states('.ui-text','.ui-text-label', $ui-states, iLabel, $interactivityTolerance)
+ui-states('.ui-text','.ui-text-closeicon', $ui-states, iLabel, $interactivityTolerance)
+ui-states('.ui-text','.ui-text-input', $ui-states, iInput, $interactivityTolerance)
+
+
+    
+    

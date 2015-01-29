@@ -1,0 +1,60 @@
+$brick ?= 30px;
+$line ?= $brick * 0.5; 
+$text-indent ?= $line * 0.5;
+$border-radius ?= 3px;
+$border-width ?= 2px;
+$font-family ?= 'Open Sans', sans-serif, Helvetica;
+
+_textarea-padding-top = $text-indent * 0.5;
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+[contenteditable="true"]:focus {
+    outline: none;
+}
+
+input, textarea { 
+  display:block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: $line;
+  font-size: $line;
+  border-radius: $border-radius;
+  font-family: $font-family;
+  border-style: solid;
+  border-color: $color-stateless;
+  border-width: $border-width;
+}
+
+input {
+  height: $brick + $border-width;
+  text-indent: $text-indent;
+}
+
+textarea {
+  min-height: $brick + $border-width;
+  padding-top: _textarea-padding-top;
+}
+
+input:hover, 
+textarea:hover {
+  border-color: $color-hover;
+}
+
+input:focus,
+textarea:focus {
+  border-color: $color-focus;
+}
+
+input:hover:disabled, 
+textarea:hover:disabled,
+input:focus:disabled,
+textarea:focus:disabled{
+  border-color: $color-stateless;
+}
+
+

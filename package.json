@@ -1,0 +1,26 @@
+{
+  "name": "@telogical/telui-text",
+  "version": "1.0.0",
+  "description": "A text input component, both single and multiline built atop the telui component system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Telogical/telui-text.git"
+  },
+  "keywords": [
+    "telui",
+    "textbox",
+    "textarea",
+    "angular",
+    "react"
+  ],
+  "author": "jharlin@telogical.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Telogical/telui-text/issues"
+  },
+  "homepage": "https://github.com/Telogical/telui-text"
+}
