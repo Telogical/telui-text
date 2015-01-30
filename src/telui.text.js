@@ -2,7 +2,7 @@
 require('@telogical/telui-core');
 require('@telogical/telui-validate');
 
-var React = require('react/addons');
+var React = global.React;
 var TelogicalUi = angular.module('TelUI');
 var UI = require('../react/telui.js');
 
