@@ -1,4 +1,3 @@
-var React = require('react/addons');
 require('@telogical/telui-label');
 
 function Text(teluiReact) {
@@ -65,7 +64,7 @@ function Text(teluiReact) {
         key = model.key || model.id,
         id = model.key || model.id,
         row = 'w-alpha w-12 w-omega',
-		type = model.type;
+        type = model.type;
 
       //parent
       var frameClasses = {
