@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/Telogical/telui-text/issues"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@telogical/telui-core": "1.x.x",
     "@telogical/telui-validate": "0.x.x"
   },
