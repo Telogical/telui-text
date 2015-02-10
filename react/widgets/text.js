@@ -1,11 +1,14 @@
 require('@telogical/telui-label');
 
-function Text(teluiReact) {
+function Text(ui) {
   'use strict';
+
+  var React = ui.Core.React,
+    _ = ui.Core._;
 
   return React.createClass({
     displayName: 'Text',
-    mixins: [teluiReact.Mixins.Widget, teluiReact.Mixins.Appearance],
+    mixins: [ui.Mixins.Widget, ui.Mixins.Appearance],
     getInitialState: function getInitialState() {
       return {
         'id': '',

@@ -1,6 +1,6 @@
-//global.UI = global.UI || require('@telogical/telui-core');
 
-require('@telogical/telui-core');
-global.UI.Text = require('./widgets/text')(global.UI);
+var TelUI = require('@telogical/telui-core');
 
-module.exports = global.UI;
+TelUI.Text = require('./widgets/text')(TelUI);
+
+module.exports = TelUI;

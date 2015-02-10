@@ -1,10 +1,12 @@
-//require('@telogical/telui-validate');
+require('@telogical/telui-validate');
 
-var UI = require('../react/telui');
+var UI = require('../react/telui'),
+  React = UI.Core.React;
 
 angular
   .module('TelUI')
-  .directive('teluiText', ['TelUIValidate',
+  .directive('teluiText', [
+    'TelUIValidate',
     function (TelUIValidate) {
       'use strict';
 
