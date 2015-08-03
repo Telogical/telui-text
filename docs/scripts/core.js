@@ -2,11 +2,10 @@ require('angular');
 require('angular-ui-router');
 
 require('@telogical/telui-core');
-require('@telogical/telui-text');
+
 require('@telogical/telui-button');
 
-
-//the checkbox
+//the text
 require('./../../index');
 
 
