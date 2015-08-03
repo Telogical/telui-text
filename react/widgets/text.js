@@ -108,6 +108,7 @@ function Text(ui) {
           'onFocus': this.__onFocus,
           'onBlur': this.__onBlur,
           'onClick': this.__onClick,
+          'type': type,
           'ref': 'input'
         };
 
