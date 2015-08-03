@@ -36,7 +36,7 @@ angular
             'rows': $scope.rows, // number of multiline rows
             'iconActive': $scope.iconActive,
             'iconInactive': $scope.iconInactive,
-            'type': $scope.type,
+            'type': $scope.type || 'text',
             'maxLength': $scope.maxlength,
             'scopeObj': $scope
           };
@@ -45,7 +45,7 @@ angular
 
         $scope
           .$watchCollection(
-            '[value, label, iconPrimary, iconSecondary, disabled, cssClass, text, click, state]',
+            '[value, label, iconPrimary, iconSecondary, disabled, cssClass, text, click, state, type]',
             renderReactText
           );
       }
