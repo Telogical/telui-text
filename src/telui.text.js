@@ -15,10 +15,7 @@ angular
         var id = $scope.id || 'text_' + Math.round(Math.random() * 9999),
           $targetElement = $element;
 
-        if (typeof $scope.text === 'undefined') {
-          $scope.text = true;
-        }
-
+        $scope.text = ($scope.text === 'false') ? false : true;
         $element.removeAttr('disabled');
 
         function renderReactText() {
@@ -29,6 +26,7 @@ angular
             'key': id, // React requires a key attribute
             'value': $scope.value,
             'state': $scope.state,
+            'text': $scope.text,
             'uiState': $scope.state || 'default',
             'label': $scope.label,
             'placeholder': $scope.placeholder,
@@ -55,7 +53,7 @@ angular
 
         'value': '=?',
         'label': '@', //;abel text
-        'title': '=?', //hide or show label
+        'title': '=?',
         'appearance': '@',
         'type': '@',
         'state': '@',
@@ -67,7 +65,9 @@ angular
 
         'iconActive': '@',
         'iconInactive': '@',
-        'maxLength': '@'
+        'maxLength': '@',
+
+        'text': '@' //hide or show label
       };
 
       var sco = TelUIValidate.extend(scopeDefinition);

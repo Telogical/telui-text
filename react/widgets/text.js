@@ -140,7 +140,7 @@ function Text(ui) {
         input = domx.div(inputFrame, domx[inputType](textInputAttrs)),
         contents = [];
 
-      if (model.text !== false) {
+      if (model.text !== false && model.text !== 'false') {
         contents.push(label);
       }
 
